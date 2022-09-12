@@ -7,7 +7,7 @@ export default function DetailsAuthor() {
         <div style={{marginLeft: '70px'}}>
         <Row>
          <Col md={5}><img src={profile} className='profile-image'/> </Col>
-         <Col md={8}><div className='author-name'>Rayen Harbaoui</div> </Col>
+         <Col md={12}><div className='author-name'>Rayen Harbaoui</div> </Col>
         </Row>
         <Row style={{marginTop:'18px'}}>
         <Col md={5}><div className='author-detail-title'>Name:</div> </Col>
