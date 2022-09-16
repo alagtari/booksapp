@@ -124,27 +124,19 @@ margin-top: 2vh;
 }
 
 .item-cover{
+  
   width: 100%;
   height: 100%;
   border-radius: 10px;
-
+background-color: rgba(0, 0, 0, 0.5);
 }
 
-.item-cover:hover{
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
-.item-cover:hover>*{
-  opacity: 1;
-  
-}
 .item-text{
- opacity: 0;
-  position: absolute;
-  bottom: 10%;
-  left: 10%;
-  color: white;
-  width: 70%;
+  padding-top: 60%;
+  padding-left: 10%;
+  color: rgba(255, 255, 255, 0.8);
+  width: 90%;
   line-height: 2.4rem;
 
 }
@@ -257,7 +249,7 @@ margin-top: 2vh;
   border: none;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 17px;
+  margin-top: 10px;
 }
 .login-btn{
   display: flex;
@@ -267,7 +259,7 @@ margin-top: 2vh;
   width: 80%;
   height: 40px;
   border-radius: 50px;
-  margin-top: 30px;
+  margin-top: 70px;
   font-size: 1.3rem;
   font-weight: 700;
   color: white;
@@ -285,4 +277,8 @@ margin-top: 2vh;
   font-size: 1.2rem;
   font-weight: 700;
   margin-left: 5px;
+}
+.scrolled-navbar{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+
 }

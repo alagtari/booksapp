@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-
+import { motion } from 'framer-motion';
 export default function Navbar() {
   let navigate = useNavigate();
   
@@ -12,15 +12,45 @@ export default function Navbar() {
       }  
   return (
     <div className='navbarr'>
-        <span className='App-logo'>
+        <motion.span
+                initial={{
+                  opacity:0,
+                  x:-200
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.6}
+                }}
+                className='App-logo'>
             Author
-        </span>
-        <span className='signupButton' onClick={navigateToSignup}>
+        </motion.span>
+        <motion.span
+                initial={{
+                  opacity:0,
+                  x:-200
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.6}
+                }}
+                className='signupButton' onClick={navigateToSignup}>
             Sign up
-        </span>
-        <span className='loginButton' onClick={navigateToLogin}>
+        </motion.span>
+        <motion.span
+                initial={{
+                  opacity:0,
+                  x:-200
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.6}
+                }}
+                className='loginButton' onClick={navigateToLogin}>
             Login
-        </span>
+        </motion.span>
         
     </div>
   )

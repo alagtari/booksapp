@@ -1,8 +1,27 @@
-import React from 'react'
-
+import React,{useState,useEffect} from 'react'
+import { motion } from 'framer-motion';
 export default function FeedNavbar() {
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 120) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        });
+    }, []);
   return (
-    <div className='feed-navbar'>
+    <motion.div
+     initial={{
+       opacity:0,
+       y:-50
+     }} 
+     whileInView={{
+       opacity:1,
+       y:0,
+       transition:{duration:0.6}
+     }} className={scrolled?'feed-navbar scrolled-navbar':'feed-navbar'}>
         <span className='feed-App-logo'>
             Author
         </span>
@@ -27,6 +46,6 @@ export default function FeedNavbar() {
         <span className='add-book-button'>
             Add a book
         </span>
-    </div>
+    </motion.div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import landingImage from '../assets/landingpageimage.svg'
 import { useNavigate } from "react-router-dom";
+import { motion  } from "framer-motion";
 
 export default function Landing() {
   let navigate = useNavigate();
@@ -14,19 +15,59 @@ export default function Landing() {
         <Navbar/>
         <div className='landing-body'>
             <div className='landing-text'> 
-                <div className='landing-title'>
+                <motion.div
+                initial={{
+                  opacity:0,
+                  x:-100
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.4}
+                }}
+                 className='landing-title'>
                     Clue Of The Wooden Cottage
-                </div>  
-                <div className='landing-description'>
+                </motion.div>  
+                <motion.div
+                initial={{
+                  opacity:0,
+                  x:-100
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.5}
+                }}
+                className='landing-description'>
                 A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                </div>
-                <div className='landing-button' onClick={navigateToSignup}>
+                </motion.div>
+                <motion.div
+                initial={{
+                  opacity:0,
+                  x:-100
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.55}
+                }}
+                className='landing-button' onClick={navigateToSignup}>
                 Signup now
-                </div>
+                </motion.div>
             </div>
-            <div className='landing-image'>
+            <motion.div
+                initial={{
+                  opacity:0,
+                  x:-100
+                }} 
+                whileInView={{
+                  opacity:1,
+                  x:0,
+                  transition:{duration:0.6}
+                }}
+                 className='landing-image'>
             <img src={landingImage}/> 
-            </div>
+            </motion.div>
             
         </div>
           
